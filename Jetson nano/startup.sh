@@ -11,5 +11,6 @@ pip3 install onnx
 sudo -H pip3 install -U jetson-stats
 # sudo systemctl restart jetson_stats.service
 jetson_release
+sudo systemctl restart jetson_stats.service
 sudo jetson_clocks
 sudo jtop
