@@ -21,4 +21,6 @@ sudo mkdir -p /opt/nvidia/deepstream/deepstream-5.1/lib
 sudo cp /usr/local/lib/librdkafka* /opt/nvidia/deepstream/deepstream-5.1/lib
 
 wget https://developer.download.nvidia.com/assets/Deepstream/DeepStream_5.1/deepstream-5.1_5.1.0-1_arm64.deb
-sudo apt-get install ./deepstream-5.1_5.1.0-1_arm64.deb
+# sudo apt-get install ./deepstream-5.1_5.1.0-1_arm64.deb
+sudo apt install -y libgstrtspserver-1.0-0 libgstreamer-plugins-base1.0-dev
+sudo dpkg -i deepstream-5.1_5.1.0-1_arm64.deb
