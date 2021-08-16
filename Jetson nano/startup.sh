@@ -8,7 +8,7 @@ sudo pip3 install -U numpy==1.19.4 future==0.18.2 mock==3.0.5 h5py==2.10.0 keras
 sudo pip3 install tensorflow-1.15.4+nv20.12-cp36-cp36m-linux_aarch64.whl
 sudo apt-get install -y protobuf-compiler libprotoc-dev 
 pip3 install onnx
-sudo -H pip install -U jetson-stats
+sudo -H pip install --no-cache-dir -U jetson-stats
 # sudo systemctl restart jetson_stats.service
 jetson_release
 sudo systemctl restart jetson_stats.service
