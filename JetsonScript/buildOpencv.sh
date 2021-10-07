@@ -1,8 +1,10 @@
 #!/bin/bash
+OPENCV_VERSION=4.1.1
+ARCH_BIN=5.3
 rm -rf ~/opencv_build
 mkdir ~/opencv_build && cd ~/opencv_build
-git clone https://github.com/opencv/opencv.git
-git clone https://github.com/opencv/opencv_contrib.git
+git clone --branch "$OPENCV_VERSION" https://github.com/opencv/opencv.git
+git clone --branch "$OPENCV_VERSION" https://github.com/opencv/opencv_contrib.git
 cd ~/opencv_build/opencv
 mkdir build && cd build
 sudo apt install -y build-essential cmake git pkg-config libgtk-3-dev \
@@ -23,7 +25,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D WITH_LIBV4L=ON \
 -D BUILD_opencv_python2=ON \
 -D BUILD_opencv_python3=ON \
--D CUDA_ARCH_BIN=6.1 \
+-D CUDA_ARCH_BIN=${ARCH_BIN} \
 ../
 make -j$(nproc)
 sudo make install
