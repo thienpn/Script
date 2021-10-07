@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf ~/opencv_build
 mkdir ~/opencv_build && cd ~/opencv_build
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
