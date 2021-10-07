@@ -6,6 +6,7 @@ mkdir ~/opencv_build && cd ~/opencv_build
 git clone --branch "$OPENCV_VERSION" https://github.com/opencv/opencv.git
 git clone --branch "$OPENCV_VERSION" https://github.com/opencv/opencv_contrib.git
 cd ~/opencv_build/opencv
+sed -i 's/include <Eigen\/Core>/include <eigen3\/Eigen\/Core>/g' modules/core/include/opencv2/core/private.hpp
 mkdir build && cd build
 sudo apt install -y build-essential cmake git pkg-config libgtk-3-dev \
 libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
