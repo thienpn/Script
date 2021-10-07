@@ -1,4 +1,5 @@
 #!/bin/bash
+# Add the option and execute the script to build OCV4.1.1 -D OPENCV_GENERATE_PKGCONFIG=YES with jetson nano. 
 OPENCV_VERSION=4.1.1
 ARCH_BIN=5.3
 rm -rf ~/opencv_build
@@ -30,4 +31,4 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 ../
 make -j$(nproc)
 sudo make install
-sudo ldconfig
+sudo ldconfig -v
